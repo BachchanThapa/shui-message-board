@@ -2,7 +2,7 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-const SECRET = process.env.JWT_SECRET || "dev-secret";
+const SECRET = process.env.JWT_SECRET;
 
 // hash "abc" -> "$2a$10$..."
 export async function hashPassword(plain) {

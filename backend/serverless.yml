@@ -8,7 +8,7 @@ provider:
   environment:
     MESSAGES_TABLE: ${self:service}-Messages-${sls:stage}
     USERS_TABLE: ${self:service}-Users-${sls:stage}
-    JWT_SECRET: super-secret-key # simple for exam; change in real projects
+    JWT_SECRET: ${env:JWT_SECRET}
   httpApi:
     cors:
       allowedOrigins: ["*"]
